@@ -1,0 +1,470 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* html tag style  */
+@layer base {
+
+  html,
+  body {
+    @apply font-muli;
+  }
+
+  /* h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  } */
+}
+
+/* layer style to add multiple class */
+@layer components {
+
+  /* .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  } */
+  .active {
+    @apply !bg-Secondary;
+  }
+
+  .commonNavTitle {
+
+    @apply text-xs leading-5 mb-2 pl-14px tracking-tighter text-WhiteOp5;
+
+  }
+
+  .commonNavItem {
+    @apply flex items-start px-14px py-10px rounded-[4px] text-White hover:bg-Secondary hover:text-White transition-colors mb-[2px];
+  }
+
+  .commonNavItemText {
+    @apply flex-1 ml-11px tracking-tighter text-xsm leading-5 text-White self-center;
+  }
+
+  .commonButton {
+    @apply self-center bg-[#F3F2F1] border-b border-solid border-[#929191] pl-[35px] pr-[35px] py-[7px] text-sm leading-[20px] text-[#000];
+  }
+
+  .commonItem1 {
+    @apply self-center bg-ButtonColor shadow-5xl pl-10px pr-3 py-[2.5px] text-sm leading-[26px] text-White flex gap-[6px];
+  }
+
+  .commonItem2 {
+    @apply lg:grid lg:grid-cols-12 block p-[7px] bg-White border border-solid border-borderColor border-b-0 last:border-b-[1px] shadow-4xl last:mb-0;
+  }
+
+  /* border: 1px solid #B1B4B6; */
+  .commonButton2Inner {
+    @apply flex lg:justify-end sm:gap-15px gap-x-3 gap-y-2 flex-wrap lg:mt-0 mt-2 sm:pr-3;
+  }
+
+  .commonItem3 {
+    @apply flex flex-wrap gap-10px text-sm leading-[26px] border border-Secondary underline text-Secondary border-solid px-10px pt-[1px] pb-[3px] rounded-sm;
+  }
+
+
+  .commonItem4 {
+    @apply flex flex-wrap gap-[6.5px] text-Secondary underline text-sm leading-[26px] border border-Secondary border-solid px-10px pt-[1px] pb-[3px] rounded-sm;
+  }
+
+
+  .commonItem5 {
+    @apply flex flex-wrap gap-10px text-colorP text-sm leading-[26px];
+  }
+
+  .commonItem6 {
+    @apply block text-colorP text-lg leading-6 tracking-tighter mb-[3px];
+  }
+
+  .commonItem7 {
+    @apply bg-ButtonBorderColorOp2 w-66px h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center;
+  }
+
+  .commonItem8 {
+    @apply w-full border border-solid border-[#D0D6E1] rounded text-left text-base tracking-tighter leading-tight font-semibold;
+  }
+
+  .commonItem9 {
+    @apply text-[13px] leading-5 tracking-tight text-Primary;
+  }
+
+
+
+  .commonItem10 {
+    @apply bg-PublishedOp01 w-[70.55px] h-66px rounded-sm text-White flex justify-center items-center text-2xl self-center border-l-[4.28px] border-Published border-solid rounded-s-[3px];
+  }
+
+
+  .commonItem11 {
+    @apply md:flex md:justify-between items-center flex-wrap pb-4;
+  }
+
+  .commonItem12 {
+    @apply text-22px self-center text-Primary font-semibold leading-7 tracking-tight sm:mb-0 mb-3;
+  }
+
+  .commonItem13 {
+    @apply border border-[#DCE1E9] border-solid w-full py-[11px] px-[15.5px] text-[#063361] sm:text-[15px] text-xs leading-5 placeholder:text-[#063361] focus:outline-none focus:border-Primary focus:ring-Primary focus:ring-0 rounded-sm bg-transparent;
+  }
+
+  .commonPadding {
+    @apply py-30px sm:pl-30px xlg:pr-5 sm:pr-30px pr-3 pl-3;
+  }
+
+  .commonItem14 {
+    @apply lg:grid lg:grid-cols-12 block p-[7px] bg-White border border-solid border-borderColor border-b-0 last:border-b-[1px] shadow-4xl last:mb-0;
+  }
+
+}
+
+/* custom style */
+@layer utilities {
+  /* .filter-none {
+    filter: none;
+  }
+
+  .filter-grayscale {
+    filter: grayscale(100%);
+  } */
+
+
+  /* width */
+  .commonNav::-webkit-scrollbar,
+  .filterWrapp::-webkit-scrollbar {
+    width: 6px;
+    transition: background .5s, width .5s;
+  }
+
+  /* Track */
+  .commonNav::-webkit-scrollbar-track,
+  .filterWrapp::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 10px;
+    transition: background .5s;
+  }
+
+  /* Handle */
+  .commonNav::-webkit-scrollbar-thumb,
+  .filterWrapp::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+    transition: background .5s;
+  }
+
+  /* Handle on hover */
+  .commonNav:hover::-webkit-scrollbar-thumb,
+  .filterWrapp:hover::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.6);
+    transition: background .5s;
+  }
+
+  .commonNavItem svg,
+  .commonNavItem svg g {
+    transition: opacity .5s;
+    align-self: center;
+  }
+
+  .commonNavItem:hover svg g {
+    opacity: 1;
+    transition: opacity .5s;
+  }
+
+  .tag {
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: #1D70B8;
+    padding: 2px 28px 2px 13px;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 26px;
+    position: relative;
+  }
+
+  .tag:after,
+  .tag:before {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 50%;
+    width: 8px;
+    height: 1px;
+    background-color: #fff;
+  }
+
+  .tag:after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .tag:before {
+    transform: translateY(-50%) rotate(135deg);
+  }
+
+  .slectArrow select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .slectArrow::after {
+    position: absolute;
+    content: "";
+    right: 10px;
+    top: 45%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 7px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M1 0.875L6.18122 6.05622L11.3624 0.875' stroke='%23262262' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  }
+
+  .active svg g {
+    transition: opacity .5s;
+    opacity: 1 !important;
+  }
+
+  .accordion-button,
+  .accordion-buttonCustom {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    padding: 6px 6px 6px 14px;
+  }
+
+  .accordion-button::after,
+  .accordion-buttonCustom::after {
+    position: absolute;
+    content: "";
+    right: 6px;
+    top: 6px;
+    width: 23px;
+    height: 23px;
+    background-color: rgb(208 214 225 / 50%);
+    border-radius: 4px;
+    transition: background .5s;
+  }
+
+  .accordion-button::before,
+  .accordion-buttonCustom::before {
+    position: absolute;
+    content: "";
+    width: 23px;
+    height: 23px;
+    right: 5.5px;
+    top: 54%;
+    transform: translateY(-50%) rotate(0deg);
+    background-color: initial;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23' fill='none'%3E%3Crect x='7' y='11' width='9' height='1' fill='%23262262'/%3E%3Crect x='11' y='7' width='1' height='9' fill='%23262262'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100%;
+    z-index: 9;
+    transition: background .5s, transform .5s;
+  }
+
+  .accordion-button.activeBtn::before {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' fill='none'%3E%3Cpath fill='%23262262' d='M7 11h9v1H7z'/%3E%3C/svg%3E");
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  .accordion-button.activeBtn::after {
+    background-color: #F5F7FA;
+  }
+
+  .accordion-button.activeBtn,
+  .accordion-button:hover {
+    background-color: #fff;
+    box-shadow: 0px 2px 20px 0px rgba(38, 34, 98, 0.07);
+    border-color: #fff;
+    color: #262262;
+  }
+
+  .showFilterMenu .custom-checkbox label {
+    color: #ffff;
+  }
+
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  /* -------------------------------------------------------------- */
+  /* Hide the default checkbox */
+  .custom-checkbox input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Style the custom checkbox */
+  .custom-checkbox label {
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    position: relative;
+    padding-left: 23px;
+  }
+
+  .custom-checkbox label::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #92A1BA;
+    cursor: pointer;
+    transition: background-color 0.5s, border-color 0.5s;
+  }
+
+  .custom-checkbox.custom-checkbox2 input[type="checkbox"]:checked+label::before {
+    background-image: none;
+  }
+
+  .custom-checkbox.custom-checkbox2 label::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='3' viewBox='0 0 10 3' fill='none'%3E%3Cpath d='M1 1.5H8.56743' stroke='%23262262' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-size: 10px 3px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #262262;
+    width: 19px;
+    height: 19px;
+  }
+
+  /* Define styles for the checked state */
+  .custom-checkbox input[type="checkbox"]:checked+label::before {
+    border-color: #000;
+  }
+
+  /* Optional: You can add a checkmark or any custom content to the checked state */
+  .custom-checkbox input[type="checkbox"]:checked+label::after {
+    content: "";
+    position: absolute;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='10' fill='none'%3E%3Cpath stroke='%23000000' stroke-linecap='round' stroke-width='2' d='m1 5 3.122 3.345L11 1.416'/%3E%3C/svg%3E");
+    background-position: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2px;
+    width: 12px;
+    height: 8.31px;
+  }
+
+  .flterWrappBody .w-\[248px\],
+  .flterWrappBody .filterWrapp,
+  .filterSm,
+  .filterWrapp,
+  .flterWrappBody #filter {
+    transition: all ease .6s;
+  }
+
+  .mainItemMid {
+    transition: all ease .6s;
+  }
+
+  .ItemMid {
+    padding-right: 248px !important;
+    transition: all ease .6s;
+  }
+
+
+
+  .filterSm .w-\[248px\] {
+    width: 60px;
+  }
+
+  #filte {
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+    left: 0;
+    top: 0;
+  }
+
+  .filterSm #filter {
+    transform: rotate(90deg);
+    position: relative;
+    left: -25px;
+    top: 20px;
+    transition: width 0.5s, transform 0.5s ease;
+  }
+
+  .filterSm .filterWrapp {
+    position: relative;
+    right: -150px;
+    transition: all ease .5s;
+  }
+
+  .showFilterMenu.filterSm .filterWrapp {
+    right: 0;
+    transition: all ease .5s;
+  }
+
+  .leftMenuBody,
+  .leftMenuBody,
+  .FilterMenuBody {
+    transition: width 1s, opacity 1s;
+  }
+
+
+
+  .ShowLeftMenu {
+    width: 100%;
+    left: 0;
+    display: block;
+    overflow-y: auto;
+    max-height: 100vh;
+    overflow-x: hidden;
+    opacity: 1;
+    transition: all ease 1s;
+  }
+
+  .showFilterMenu .w-\[248px\] {
+    width: 100% !important;
+  }
+
+  .showFilterMenu .filterWrapp {
+    opacity: 1;
+  }
+
+  .showFilterMenu {
+    width: 100% !important;
+    right: 0;
+    top: 0;
+    display: block;
+    opacity: 1;
+  }
+
+  @media (max-width:1200px) {
+    .FilterMenuBody {
+      width: 0;
+      /* left: -99999999px; */
+    }
+
+    .leftMenuBody {
+      /* left: -9999999px; */
+      top: 0;
+      transition: all ease 1s;
+    }
+
+    .filterWrapp {
+      width: 100%;
+      opacity: 1;
+      right: 0;
+    }
+
+    .commonNav {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .showFilterMenu .FilterMenuBodyinner {
+    overflow-y: auto;
+    max-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    transition: width 1s, opacity 1s;
+  }
+
+}

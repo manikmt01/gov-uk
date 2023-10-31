@@ -1,0 +1,22 @@
+{
+  "name": "tailwindcss",
+  "version": "1.0.0",
+  "description": "(learing)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite",
+    "build": "tailwindcss -i ./src/tailwind.css -o ./css/style.min.css --minify",
+    "watch": "tailwindcss -i ./src/tailwind.css -o ./css/style.min.css  --minify --watch",
+    "dev": "vite build"
+  },
+  "keywords": [],
+  "author": "Manik MT",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.4",
+    "vite": "^4.5.0"
+  }
+}
